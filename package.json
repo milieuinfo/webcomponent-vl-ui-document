@@ -37,14 +37,16 @@
 		"demo": "http-server"
 	},
 	"dependencies": {
-		"vl-ui-core": "5.5.5"
+		"vl-ui-core": "^6.0.0"
 	},
 	"peerDependencies": {
-		"vl-ui-core": "^5.5.5"
+		"vl-ui-core": "^6.0.0"
 	},
 	"devDependencies": {
-		"@govflanders/vl-ui-util": "3.9.1",
-		"simple-git": "^2.18.0",
+		"@govflanders/vl-ui-document": "^3.11.5",
+		"@govflanders/vl-ui-link": "^3.11.5",
+		"@govflanders/vl-ui-util": "^3.11.5",
+		"vl-ui-body": "^1.0.3",
 		"vl-ui-util": "^5.2.14"
 	}
 }

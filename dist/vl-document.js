@@ -16,7 +16,7 @@ export class VlDocument extends vlElement(HTMLElement) {
   constructor() {
     super(`
         <style>
-            @import '/src/style.css';
+            @import '/node_modules/vl-ui-document/dist/style.css';
         </style>
         <div class="vl-col--1-4 vl-col--1-2--m vl-col--1-1--s">
             <a class="vl-document" href="#">
