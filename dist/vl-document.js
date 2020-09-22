@@ -13,13 +13,16 @@ import {vlElement, define} from '/node_modules/vl-ui-core/dist/vl-core.js';
  *
  */
 export class VlDocument extends vlElement(HTMLElement) {
+  static get _observedAttributes() {
+    return ['href'];
+  }
+
   constructor() {
     super(`
         <style>
             @import '/node_modules/vl-ui-document/dist/style.css';
         </style>
-        <div class="vl-col--1-4 vl-col--1-2--m vl-col--1-1--s">
-            <a class="vl-document" href="#">
+        <a class="vl-document" href="#" download>
             <div class="vl-document__type">
                 <i class="vl-vi vl-vi-document" aria-hidden="true"></i>
                 <span class="vl-document__type__text">
@@ -34,9 +37,12 @@ export class VlDocument extends vlElement(HTMLElement) {
                     <slot name="metadata"></slot>
                 </div>
             </div>
-            </a>
-        </div>
+        </a>
     `);
+  }
+
+  _hrefChangedCallback(oldValue, newValue) {
+    this._element.href = newValue;
   }
 }
 
