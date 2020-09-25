@@ -22,9 +22,4 @@ describe('vl-document', async () => {
     const document = await vlDocumentPage.getDocument();
     await assert.eventually.equal(document.getMetadata(), 'PDF - 580 kB');
   });
-
-  it('Als gebruiker kan ik het document downloaden', async () => {
-    const document = await vlDocumentPage.getDocument();
-    await document.download();
-  });
 });
