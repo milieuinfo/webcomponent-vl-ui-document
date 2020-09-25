@@ -1,6 +1,6 @@
 {
 	"name": "vl-ui-document",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Gebruik de document component om een link naar een bestand toe te voegen dat de gebruiker kan bekijken in de browser of downloaden.",
 	"author": "DIDM",
 	"license": "MIT",
