@@ -6,6 +6,9 @@ import {vlElement, define} from '/node_modules/vl-ui-core/dist/vl-core.js';
  * @classdesc Gebruik de document component om een link naar een bestand toe te voegen dat de gebruiker kan bekijken in de browser of downloaden.
  *
  * @extends HTMLElement
+ * @mixes vlElement
+ *
+ * @property {string} data-vl-href - Attribuut wordt gebruikt om de download link te bepalen.
  *
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-document/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-document/issues|Issues}
@@ -19,25 +22,25 @@ export class VlDocument extends vlElement(HTMLElement) {
 
   constructor() {
     super(`
-        <style>
-            @import '/node_modules/vl-ui-document/dist/style.css';
-        </style>
-        <a class="vl-document" href="#" download>
-            <div class="vl-document__type">
-                <i class="vl-vi vl-vi-document" aria-hidden="true"></i>
-                <span class="vl-document__type__text">
-                    <slot name="type"></slot>
-                </span>
-            </div>
-            <div class="vl-document__content">
-                <div class="vl-document__title vl-link" data-vl-clamp="2">
-                    <slot name="title"></slot>
-                </div>
-                <div class="vl-document__metadata">
-                    <slot name="metadata"></slot>
-                </div>
-            </div>
-        </a>
+      <style>
+        @import '/node_modules/vl-ui-document/dist/style.css';
+      </style>
+      <a class="vl-document" href="#" download>
+        <div class="vl-document__type">
+          <i class="vl-vi vl-vi-document" aria-hidden="true"></i>
+          <span class="vl-document__type__text">
+            <slot name="type"></slot>
+          </span>
+        </div>
+        <div class="vl-document__content">
+          <div class="vl-document__title vl-link">
+            <slot name="title"></slot>
+          </div>
+          <div class="vl-document__metadata">
+            <slot name="metadata"></slot>
+          </div>
+        </div>
+      </a>
     `);
   }
 
