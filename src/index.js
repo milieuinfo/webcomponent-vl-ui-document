@@ -1,3 +1,1 @@
-module.exports = {
-  VlDocument: require('../dist/vl-document.src.js').VlDocument,
-};
+export * from '../dist/vl-document.src.js';
