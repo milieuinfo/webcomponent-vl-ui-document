@@ -9,6 +9,10 @@ describe('vl-document', async () => {
     return vlDocumentPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlDocumentPage.hasWcagIssues());
+  });
+
   it('Als gebruiker kan ik het document type bekijken', async () => {
     const document = await vlDocumentPage.getDocument();
     await assert.eventually.equal(document.getType(), 'PDF');
